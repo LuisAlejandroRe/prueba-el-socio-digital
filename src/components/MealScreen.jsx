@@ -16,13 +16,37 @@ export const MealScreen = () => {
   
   }, [param])
 
-  const state = useFetch(url);
-  console.log(state)
+  const { loading, data, error } = useFetch(url);
+  let mealData = null;
+
+  if ( data?.meals ) {
+    mealData = data.meals[0];
+  } 
+  
+  if ( data?.meals === null || error ) {
+    return (<h1>Cannot find the meal, Please check the url</h1>)
+  }
 
   return (
     <>
       <Banner />
-      
+      {
+        loading
+        ?
+        <h1>Loading...</h1>
+        :
+        <section>
+          <div>
+            <div>
+              <span>20-30</span>
+              <h1>{mealData?.strMeal}</h1>
+              <span>32 reviews</span>
+              <h3>{mealData?.strArea}</h3>
+            </div>
+          </div>
+          <p>{mealData?.strInstructions}</p>
+        </section>
+      }
     </>
   )
 }
