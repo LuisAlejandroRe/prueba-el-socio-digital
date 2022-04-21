@@ -3,6 +3,7 @@ import { Banner } from "./Banner"
 import { CategoryNavbar } from "./CategoryNavbar"
 import { MealCategoryList } from "./MealCategoryList"
 import { MealList } from "./MealList"
+import BannerImg from '../assets/10882-image.jpg'
 
 export const HomeScreen = () => {
 
@@ -11,14 +12,17 @@ export const HomeScreen = () => {
 
   return (
     <>
-      <Banner />
+      <Banner
+        img={BannerImg}
+      />
 
       <section className="home__section">
 
-        <div>
+        <div className="home__sectionTop">
           <h1>Recipes</h1>
           <div>
             <input type="text" />
+            <i className="fa fa-search fa-lg"></i>
           </div>
         </div>
 

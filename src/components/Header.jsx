@@ -2,12 +2,12 @@ import { Link, NavLink } from "react-router-dom"
 
 export const Header = () => {
   return (
-    <header>
+    <header className="header__container">
       <Link to='/' >
         KUKS FRESH
       </Link>
 
-      <nav>
+      <nav className="header__navbar">
         <NavLink 
           to='/' 
           className={ ({ isActive }) => "nav-link" + (isActive ? ' nav-active' : '') }

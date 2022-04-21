@@ -1,6 +1,10 @@
 
-export const Banner = () => {
+export const Banner = ({ img }) => {
   return (
-    <div>Banner</div>
+    <div className="banner__container">
+      {
+        img && <img src={img} alt="banner image" />
+      }
+    </div>
   )
 }

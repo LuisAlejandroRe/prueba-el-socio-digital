@@ -1,0 +1,51 @@
+
+.home__section {
+  width: 100%;
+  padding: 5px;
+}
+
+.home__sectionTop {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  & > h1 {
+    color: $secondary;
+    font-size: x-large;
+  }
+
+  & > div {
+    height: 40px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: $light-grey;
+    display: flex;
+    align-items: center;
+
+    & > input {
+      background-color: $light-grey;
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.fa-search {
+  color: $secondary;
+  cursor: pointer;
+}
+
+.mealList__container {
+  width: 100%;
+  padding: 10px 5px;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+}

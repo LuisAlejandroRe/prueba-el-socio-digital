@@ -21,7 +21,7 @@ export const CategoryNavbar = () => {
         data?.categories.map( category => (
           <NavLink 
             key={category.idCategory}
-            className="category__navItem"
+            className={ ({ isActive }) => "category__navbarItem" + (isActive ? ' category-active' : '') }
             to={`/category/${category.strCategory}`}
           >
             <img src={category.strCategoryThumb} alt={category.strCategory} />

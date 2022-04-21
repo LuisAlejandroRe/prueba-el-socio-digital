@@ -12,6 +12,18 @@ export const MealCard = ({ meal }) => {
 
       <div>
         <span>{meal?.strMeal}</span>
+        <i className="fa fa-heart" aria-hidden="true"></i>
+      </div>
+
+      <div className="mealCard__review">
+        <div>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+          <i className="fa fa-star" aria-hidden="true"></i>
+        </div>
+        <span>32 Reviews</span>
       </div>
       
     </Link>
